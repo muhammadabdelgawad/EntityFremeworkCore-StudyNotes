@@ -5,12 +5,18 @@ namespace EFCore.Models
     /// -- Rename Table Using Data Annotations
     //[Table("AuditEntriesForTestRename")]
 
-    /// -- Change Schema Using Data Annotations
-   // [Table("AuditEntries", Schema = "TestNewSchema")]
+    /// -- Change Table Name & Schema Using Data Annotations
+   // [Table("AuditEntriesForTest", Schema = "TestNewSchema")]
     public class AuditEntry
     {
         public int Id { get; set; }
         public string Username { get; set; }
+
+        /// -- Exclude the property  
+        // [NotMapped]
+
+        /// -- Change Column Name By Data Annotation
+        // [Column("NewNameOfAction")]
         public string Action { get; set; }
     }
 }
