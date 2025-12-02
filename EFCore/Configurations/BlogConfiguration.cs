@@ -39,10 +39,17 @@ namespace EFCore.Configurations
 
             #endregion
 
+            #region Specify Primary and change Key Name  Using  Fluent API
 
+            //builder.HasKey(b => b.Id).HasName("NewNameOfPrimaryKey");
 
+            #endregion
 
+            #region Set Composite Key Using Fluent API
 
+            builder.HasKey(b => new { b.Id, b.Url });
+
+            #endregion
 
         }
     }

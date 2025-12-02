@@ -51,10 +51,12 @@ namespace EFCore
 
         }
 
+        /// -- Add DbSet for Each Entity
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<AuditEntry> AuditEntries { get; set; }
         public DbSet<Post> Posts { get; set; }
+        public DbSet<Book> Books { get; set; }
 
     }
 }
