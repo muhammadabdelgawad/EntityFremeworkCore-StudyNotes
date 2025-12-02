@@ -10,6 +10,14 @@ namespace EFCore.Configurations
         {
             builder.Property(b => b.Url)
                 .IsRequired();
+
+            #region To change the default schema using Fluent API 
+
+            // builder.ToTable("Blogs", "TestNewSchema");
+
+            #endregion
+
+
         }
     }
 }
