@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EFCore.Models
 {
@@ -17,6 +18,10 @@ namespace EFCore.Models
 
         /// -- Change Column Name By Data Annotation
         // [Column("NewNameOfAction")]
+
+
+        /// -- Add Comment to Column By Data Annotation
+        //[Comment("the action of auditentry")]
         public string Action { get; set; }
     }
 }
