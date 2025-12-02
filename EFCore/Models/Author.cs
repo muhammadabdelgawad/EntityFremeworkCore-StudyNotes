@@ -11,5 +11,8 @@ namespace EFCore.Models
 
         [Required ,MaxLength(50)]
         public string LastName { get; set; }
+
+        [Required, MaxLength(100)]
+        public string DisplayName { get; set; }
     }
 }

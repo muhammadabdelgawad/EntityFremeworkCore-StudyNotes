@@ -48,9 +48,19 @@ namespace EFCore
             // modelBuilder.Entity<Employee>().ToView("EmployeesView");  
             #endregion
 
+            #region Add Computed Column
+            //modelBuilder.Entity<Author>().Property(a => a.DisplayName)
+            //                                 .HasComputedColumnSql("[FirstName] + ' ' + [LastName]");
+            #endregion
+
+
+
+
+
+
+
 
         }
-
         /// -- Add DbSet for Each Entity
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Blog> Blogs { get; set; }

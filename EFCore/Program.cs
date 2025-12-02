@@ -23,8 +23,12 @@ var _dbContext = new AppDbContext();
 
 #endregion
 
+var author = new Author
+{
+    FirstName = "Muhammad",
+    LastName = "Abdelgawad"
+};
 
-
-
-
+_dbContext.Authors.Add(author);
+_dbContext.SaveChanges();
 
