@@ -60,9 +60,9 @@ namespace EFCore.Configurations
 
             #region Configure One-to-One Relationship Between Blog and BlogImage Using Fluent API
 
-            builder.HasOne(b => b.BlogImage)
-                   .WithOne(bi => bi.Blog)
-                   .HasForeignKey<BlogImage>(b => b.BlogId);
+            //builder.HasOne(b => b.BlogImage)
+            //       .WithOne(bi => bi.Blog)
+            //       .HasForeignKey<BlogImage>(b => b.BlogId);
 
             #endregion
 
