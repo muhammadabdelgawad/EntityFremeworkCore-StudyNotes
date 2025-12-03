@@ -52,13 +52,19 @@ namespace EFCore.Configurations
             #endregion
 
             #region Set Default Value & HasDefaultValueSql  Using Fluent API
-           
+
             // builder.Property(b => b.Rating).HasDefaultValue(3).HasDefaultValueSql("GETDATE()");
 
             #endregion
 
 
+            #region Configure One-to-One Relationship Between Blog and BlogImage Using Fluent API
 
+            builder.HasOne(b => b.BlogImage)
+                   .WithOne(bi => bi.Blog)
+                   .HasForeignKey<BlogImage>(b => b.BlogId);
+
+            #endregion
 
         }
     }

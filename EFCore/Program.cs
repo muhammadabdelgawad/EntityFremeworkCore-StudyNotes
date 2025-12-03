@@ -21,14 +21,16 @@ var _dbContext = new AppDbContext();
 //_dbContext.SaveChanges();
 
 
+
+//var author = new Author
+//{
+//    FirstName = "Muhammad",
+//    LastName = "Abdelgawad"
+//};
+
+//_dbContext.Authors.Add(author);
+//_dbContext.SaveChanges();
+
+
 #endregion
-
-var author = new Author
-{
-    FirstName = "Muhammad",
-    LastName = "Abdelgawad"
-};
-
-_dbContext.Authors.Add(author);
-_dbContext.SaveChanges();
 
