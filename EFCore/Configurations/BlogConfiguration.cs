@@ -78,8 +78,18 @@ namespace EFCore.Configurations
             #region  Create Index on Url column Using Fluent API
 
             // builder.HasIndex(b => b.Url); 
-           // builder.HasIndex(b => new { b.Url, b.Rating }); // Composite Index
 
+            // builder.HasIndex(b => new { b.Url, b.Rating }); // Composite Index
+
+            // builder.HasIndex(b => b.Url).HasDatabaseName("Index_Test"); // Custom Index Name
+
+            // builder.HasIndex(b => b.Url).HasFilter("[Url IS NOT NULL"); // Filtered Index 
+
+           // builder.HasIndex(b => b.Url).IsUnique(); // Unique Index
+
+            //builder.HasIndex(b => b.Url)
+            //       .IsUnique()
+            //       .HasFilter(null); // Unique Index without filter
             #endregion
 
 
