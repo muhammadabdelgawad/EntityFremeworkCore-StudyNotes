@@ -117,6 +117,32 @@ namespace EFCore
 
             #endregion
 
+            #region Configure Sequence Using Fluent API
+
+            //modelBuilder.HasSequence<int>("OrderNumber");
+
+            //modelBuilder.Entity<Order>()
+            //    .Property(o => o.OrderNo)
+            //    .HasDefaultValueSql("NEXT VALUE FOR OrderNumber"); // will get the next value from the sequence
+            #endregion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         }
         /// -- Add DbSet for Each Entity
         public DbSet<Employee> Employees { get; set; }
@@ -128,6 +154,7 @@ namespace EFCore
         public DbSet<Author> Authors { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Tag> Tags { get; set; }
+        public DbSet<Order> Orders { get; set; }
 
     }
 }

@@ -3,7 +3,7 @@ using EFCore.Models;
 
 var _dbContext = new AppDbContext();
 
-#region Add & Save To Database
+#region Add & Save Employee To Database
 //var employee01 = new Employee
 //{
 //    Name = "Muhammad"
@@ -13,7 +13,7 @@ var _dbContext = new AppDbContext();
 //_dbContext.SaveChanges(); -- Save Employee to DataBase 
 #endregion
 
-#region Add & Save 
+#region Add & Save  Blog & Author to Database
 
 //var blog = new Blog { Url = "test01" };
 
@@ -31,6 +31,14 @@ var _dbContext = new AppDbContext();
 //_dbContext.Authors.Add(author);
 //_dbContext.SaveChanges();
 
+
+#endregion
+
+#region Add & Save Order to Database
+
+//var order = new Order { Amount = 200 };
+//_dbContext.Orders.Add(order);
+//_dbContext.SaveChanges();
 
 #endregion
 
