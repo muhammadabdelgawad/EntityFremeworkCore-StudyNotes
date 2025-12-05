@@ -53,9 +53,6 @@ Currently, the application is a simple "Hello, World!" console application.
 
 Future examples will demonstrate more complex EF Core functionality.  Refer to the specific example's README for detailed usage instructions.
 
-## API Documentation
-
-Currently, there is no API. This section will be updated as more complex examples are added.
 
 ## Contributing Guidelines
 
