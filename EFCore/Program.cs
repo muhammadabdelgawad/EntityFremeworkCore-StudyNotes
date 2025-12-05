@@ -1,7 +1,7 @@
 ﻿using EFCore;
 using EFCore.Models;
 
-//var _dbContext = new AppDbContext();
+var _dbContext = new AppDbContext();
 
 #region Add & Save Employee To Database
 //var employee01 = new Employee
@@ -58,4 +58,18 @@ using EFCore.Models;
 //}
 #endregion
 
-Console.WriteLine("tnsiahsi");
+#region Read & Display Stocks from Database
+//var stocks = _dbContext.Stocks.ToList();
+//foreach (var stock in stocks)
+//{
+//    Console.WriteLine($"Id: {stock.Id}, Name: {stock.Name}, Symbol: {stock.Symbol}, Sector: {stock.Sector}, Industry: {stock.Industry}, Balance: {stock.Balance}");
+//}
+
+#endregion
+
+#region Select Item Using Find
+
+//var stock = _dbContext.Stocks.Find(100);
+//Console.WriteLine($"Id: {stock.Id}, Name: {stock.Name}");
+
+#endregion
