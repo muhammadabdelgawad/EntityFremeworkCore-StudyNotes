@@ -51,10 +51,11 @@ using EFCore.Models;
 
 //    if (blog == null)// not exists
 //    {
-//        _dbContext.Blogs.Add(new Blog { Url = "www.google.com"});
-//       _dbContext.SaveChanges();
-//         Console.WriteLine("Blog Added Successfully!");
+//        _dbContext.Blogs.Add(new Blog { Url = "www.google.com" });
+//        _dbContext.SaveChanges();
+//        Console.WriteLine("Blog Added Successfully!");
 //    }
 //}
 #endregion
 
+Console.WriteLine("tnsiahsi");
