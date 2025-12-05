@@ -126,7 +126,17 @@ namespace EFCore
             //    .HasDefaultValueSql("NEXT VALUE FOR OrderNumber"); // will get the next value from the sequence
             #endregion
 
+            #region Data Seeding Using Fluent API
 
+            //modelBuilder.Entity<Blog>().HasData(
+            //    new Blog { Id = 5, Url = "https://example.com/blog1" },
+            //    new Blog { Id = 6, Url = "https://example.com/blog2" },
+            //    new Blog { Id = 7, Url = "https://example.com/blog3" },
+            //    new Blog { Id = 8, Url = "https://example.com/blog4" },
+            //    new Blog { Id = 9, Url = "https://example.com/blog5" }
+            //);
+
+            #endregion
 
 
 

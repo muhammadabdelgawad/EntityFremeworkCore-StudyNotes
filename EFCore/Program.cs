@@ -1,7 +1,7 @@
 ﻿using EFCore;
 using EFCore.Models;
 
-var _dbContext = new AppDbContext();
+//var _dbContext = new AppDbContext();
 
 #region Add & Save Employee To Database
 //var employee01 = new Employee
@@ -39,6 +39,22 @@ var _dbContext = new AppDbContext();
 //var order = new Order { Amount = 200 };
 //_dbContext.Orders.Add(order);
 //_dbContext.SaveChanges();
+//Console.WriteLine("Data Saved Successfully!");
+#endregion
 
+#region  Add Blog & Check if Blog exists
+//using (var _dbContext = new AppDbContext())
+//{
+//    _dbContext.Database.EnsureCreated();
+
+//    var blog = _dbContext.Blogs.FirstOrDefault(b => b.Url == "www.google.com");
+
+//    if (blog == null)// not exists
+//    {
+//        _dbContext.Blogs.Add(new Blog { Url = "www.google.com"});
+//       _dbContext.SaveChanges();
+//         Console.WriteLine("Blog Added Successfully!");
+//    }
+//}
 #endregion
 
