@@ -1,5 +1,6 @@
 ﻿using EFCore;
 using EFCore.Models;
+using Microsoft.EntityFrameworkCore;
 
 var _dbContext = new AppDbContext();
 
@@ -73,3 +74,65 @@ var _dbContext = new AppDbContext();
 //Console.WriteLine($"Id: {stock.Id}, Name: {stock.Name}");
 
 #endregion
+
+#region Filter Data - Where 
+
+//var stock = _dbContext.Stocks.Where(s => s.Balance > 90000).ToList();
+
+//foreach (var s in stock)
+//{
+//	Console.WriteLine($"Id: {s.Id},  Balance: {s.Balance}");
+//} 
+
+#endregion
+
+#region Select Specific Columns & Display  -Select - Using Anonymous Type
+//var stock = _dbContext.Stocks.Select(x => new { Id = x.Id, Name = x.Name });
+
+//foreach (var s in stock)
+//{
+//    Console.WriteLine($"Id: {s.Id},  Name: {s.Name}");
+//} 
+#endregion
+
+#region Grouping Data - GroupBy 
+
+//var stocks = _dbContext.Stocks
+//    .GroupBy(s => s.Industry)
+//    .Select(x => new { Industry = x.Key, Count = x.Count()});
+
+//foreach (var stock in stocks)
+//{
+//    Console.WriteLine($"Industry: {stock.Industry},  Count: {stock.Count}");
+//}
+
+#endregion
+
+#region Tracking
+
+/// - Enable Tracking  -EF Core Tracks Changes on Balance Property
+//var stock = _dbContext.Stocks.SingleOrDefault(s => s.Id == 1);
+//stock!.Balance += 5000;
+//_dbContext.SaveChanges();
+
+/// - Disable Tracking - Using AsNoTracking() Method
+//var stock = _dbContext.Stocks.AsNoTracking().SingleOrDefault(s => s.Id == 1);  
+//stock!.Balance += 5000;
+//_dbContext.SaveChanges();
+
+/// Disable Tracking for All Queries "Change EF Core Default Tracking"
+//_dbContext.ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
+
+
+#endregion
+
+
+
+
+
+
+
+
+
+
+
