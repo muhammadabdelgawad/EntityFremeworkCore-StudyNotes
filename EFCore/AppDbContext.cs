@@ -18,7 +18,7 @@ namespace EFCore
 
 
             #region AnOther Way to Apply Configuration One by One [ Not Recommended ]
-
+            ///-- Apply Configuration For Each Entity Separately In Seperate Class File "Best practice"
             // new BlogConfiguration().Configure(modelBuilder.Entity<Blog>()); 
 
             #endregion
