@@ -221,7 +221,7 @@ var _dbContext = new AppDbContext();
 //_dbContext.Nationalities.AddRange(nationalities); // Add Multiple Nationalities to DbSet
 //_dbContext.SaveChanges(); // Save Changes to Database
 
-/// -- Add Author with Existing National
+/// -- Add Author with Existing National -- Using Navigation Property
 
 //var author = new Author
 //{
