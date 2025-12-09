@@ -149,6 +149,7 @@ namespace EFCore
 
             #region Change Delete Behavior
             //modelBuilder.Entity<Blog>().HasMany(b => b.Posts).WithOne(p => p.Blog).OnDelete(DeleteBehavior.Restrict); // Configure Restrict Delete Behavior 
+            //modelBuilder.Entity<Blog>().HasMany(b => b.Posts).WithOne(p => p.Blog).OnDelete(DeleteBehavior.SetNull); // Configure SetNull Delete Behavior 
             #endregion
 
         }
