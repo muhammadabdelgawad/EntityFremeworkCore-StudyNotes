@@ -145,7 +145,11 @@ namespace EFCore
 
             modelBuilder.Entity<Order>().HasQueryFilter(o => !o.IsDeleted); // Global Query Filter to Exclude Soft Deleted Records
 
-            #endregion      
+            #endregion
+
+            #region Change Delete Behavior
+            //modelBuilder.Entity<Blog>().HasMany(b => b.Posts).WithOne(p => p.Blog).OnDelete(DeleteBehavior.Restrict); // Configure Restrict Delete Behavior 
+            #endregion
 
         }
             /// -- Add DbSet for Each Entity 

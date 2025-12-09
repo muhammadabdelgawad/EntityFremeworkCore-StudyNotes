@@ -290,4 +290,22 @@ var _dbContext = new AppDbContext();
 //_dbContext.Nationalities.RemoveRange(nationalities); 
 //_dbContext.SaveChanges();
 
+/// Delete Blog - Using Find & Remove Methods   - Third Way
+
+//var blog = _dbContext.Blogs.Find(5);
+
+//_dbContext.Blogs.Remove(blog!);
+//_dbContext.SaveChanges();
+
+///-- Delete Blog & Its Related Posts - Using RemoveRange Method - Fourth Way
+
+//var blog = _dbContext.Blogs.Find(6);
+//var post = _dbContext.Posts.Where(p => p.BlogId == 5);
+
+//_dbContext.Blogs.RemoveRange(post!);
+//_dbContext.Blogs.Remove(blog!);
+//_dbContext.SaveChanges();
+
+
+
 #endregion
