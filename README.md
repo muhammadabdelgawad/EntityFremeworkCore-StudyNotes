@@ -1,7 +1,3 @@
-# EntityFrameworkCore-StudyNotes
-
-This repository serves as a collection of study notes and example projects exploring the Entity Framework Core (EF Core) library. While the current example is very basic, the intention is to expand this repository with more complex and practical demonstrations of EF Core features.
-
 # Entity Framework Core - Complete Guide & Reference 
 
 A comprehensive demonstration project showcasing **Entity Framework Core** features, patterns, and best practices for building robust data access layers in .NET applications.
