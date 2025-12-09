@@ -309,3 +309,83 @@ var _dbContext = new AppDbContext();
 
 
 #endregion
+
+#region Transactions
+/// -- Using Transaction to Ensure Data Integrity
+
+//using var transaction = _dbContext.Database.BeginTransaction();
+
+//try
+//{
+//    _dbContext.Nationalities.Add(new Nationality { Name = "Test 8" });
+//    _dbContext.SaveChanges();
+
+
+
+//    // _dbContext.Nationalities.Add(new Nationality {Id= 10, Name = "Test 10" });  // This will cause an exception due to duplicate primary key
+
+//    _dbContext.SaveChanges();
+
+//    transaction.Commit(); // Commit Transaction if all operations succeed
+//}
+//catch (Exception)
+//{
+//    transaction.Rollback(); // Rollback Transaction if any operation fails
+
+//}
+
+
+/// -- Using Savepoint in Transaction to Rollback Partial Changes
+
+//var transaction = _dbContext.Database.BeginTransaction();
+//try
+//{
+//    _dbContext.Nationalities.Add(new Nationality { Name = "Test 8" });
+//    _dbContext.SaveChanges();
+
+//    transaction.CreateSavepoint("AfterFirstInsert"); // Create Savepoint after first insert
+
+//    // _dbContext.Nationalities.Add(new Nationality {Id= 10, Name = "Test 10" });  // This will cause an exception due to duplicate primary key
+//    _dbContext.Nationalities.Add(new Nationality { Name = "Test 3" });
+//    _dbContext.Nationalities.Add(new Nationality { Name = "Test 4" });
+//    _dbContext.SaveChanges();
+
+//    transaction.Commit(); // Commit Transaction if all operations succeed
+//}
+//catch (Exception)
+//{
+
+//    transaction.RollbackToSavepoint("AfterFirstInsert"); // Rollback to Savepoint
+//}
+
+/// --- Using Savepoint in Transaction to Rollback Partial Changes and Commit Remaining Changes "If Business Need that"
+
+//var transaction = _dbContext.Database.BeginTransaction();
+//try
+//{
+//    _dbContext.Nationalities.Add(new Nationality { Name = "Test 8" });
+//    _dbContext.SaveChanges();
+
+//    transaction.CreateSavepoint("AfterFirstInsert"); // Create Savepoint after first insert
+
+//    // _dbContext.Nationalities.Add(new Nationality {Id= 10, Name = "Test 10" });  // This will cause an exception due to duplicate primary key
+//    _dbContext.Nationalities.Add(new Nationality { Name = "Test 3" });
+//    _dbContext.Nationalities.Add(new Nationality { Name = "Test 4" });
+//    _dbContext.SaveChanges();
+
+//    transaction.Commit(); // Commit Transaction if all operations succeed
+//}
+//catch (Exception)
+//{
+
+//    transaction.RollbackToSavepoint("AfterFirstInsert"); // Rollback to Savepoint
+//    transaction.Commit(); // Commit the transaction after rolling back to savepoint
+//}
+#endregion
+
+
+
+
+
+
+
