@@ -16,7 +16,7 @@ Currently, this repository contains a minimal "Hello, World!" console applicatio
 ## Technology Stack
 
 *   .NET Core 10
-*   C#
+*   C# 14
 *   Entity Framework Core 10
 
 ## Prerequisites
