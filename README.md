@@ -23,7 +23,9 @@ Perfect for developers looking to:
 - ✅ **CRUD Operations** - Create, Read, Update, Delete with multiple approaches
 - ✅ **Advanced Querying** - Filtering, projection, grouping, and ordering
 - ✅ **Bulk Operations** - High-performance batch updates and deletes
-
+- ✅ Stored procedure integration
+- ✅ Raw SQL queries
+  
 ### Relationships
 - 🔗 **One-to-One** - Blog and BlogImage
 - 🔗 **One-to-Many** - Blog and Posts, Author and Books
